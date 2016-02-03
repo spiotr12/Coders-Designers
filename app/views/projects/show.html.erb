@@ -7,8 +7,10 @@
   <div id="content">
     <%= @project.description %>
     <a href="<%= @project.link %>" class="project_button" , target="_blank">Visit <%= @project.title %></a><br>
-    <%= link_to 'Edit', :edit_project %>
-    <%= link_to 'Back', :back %>
+    <%- if user_signed_in? %>
+        <%= link_to 'Edit', :edit_project %>
+        <%= link_to 'Back', :back %>
+    <% end %>
   </div>
 
   <hr>
