@@ -1,0 +1,11 @@
+<h1 id="page_title">Bios</h1>
+
+<div id="posts_wrapper" class="skinny_wrapper">
+  <% @bios.each do |bio| %>
+      <div class="bio">
+        <p class="date"><%= bio.created_at.strftime('%A, %B %d') %></p>
+        <h2><a href="#"><%= link_to bio.name, project %></a></h2>
+        <hr>
+      </div>
+  <% end %>
+</div>
