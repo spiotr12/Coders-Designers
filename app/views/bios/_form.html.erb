@@ -1,0 +1,32 @@
+<%= simple_form_for @bio do |f| %>
+    <% if @bio.errors.any? %>
+        <h2><%= pluralize(@bio.errors.count, "error") %> prevented this bio from saving:</h2>
+        <ul>
+          <% @bio.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+    <% end %>
+
+    <%= f.label :name %> <br>
+    <%= f.text_field :name %>
+
+    <br>
+    <br>
+    <%= f.label :position %> <br>
+    <%= f.text_field :position %>
+    <br>
+    <br>
+
+    <%= f.label :description %> <br>
+    <%= f.text_area :description %>
+    <br>
+    <br>
+    <%= image_tag @bio.avatar.url %>
+    <%= f.input :avatar, as: :file , :type => "file"%>
+    <div id="show_avatar"></div>
+    <br>
+    <br>
+
+    <%= f.submit %>
+<% end %>

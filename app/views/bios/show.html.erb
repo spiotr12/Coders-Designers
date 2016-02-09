@@ -1,0 +1,19 @@
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <p class="date"><%= @bio.created_at.strftime('%A, %B %d') %></p>
+    <h1><%= @bio.name %></h1>
+    <hr>
+  </header>
+  <div id="content">
+    <%= @bio.name %><br>
+    <%= @bio.position %><br>
+    <%= @bio.description %><br>
+    <%= image_tag @bio.avatar.url %><br>
+    <%- if user_signed_in? %>
+        <%= link_to 'Edit', :edit_bio %>
+        <%= link_to 'Back', :back %>
+    <% end %>
+  </div>
+
+  <hr>
+</div>

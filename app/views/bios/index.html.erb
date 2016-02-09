@@ -4,7 +4,7 @@
   <% @bios.each do |bio| %>
       <div class="bio">
         <p class="date"><%= bio.created_at.strftime('%A, %B %d') %></p>
-        <h2><a href="#"><%= link_to bio.name, project %></a></h2>
+        <h2><a href="#"><%= link_to bio.name, bio %></a></h2>
         <hr>
       </div>
   <% end %>

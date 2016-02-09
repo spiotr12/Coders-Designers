@@ -4,7 +4,7 @@ class BiosController < ApplicationController
   end
 
   def show
-
+    @bio = Bio.find(find_bios)
   end
 
   def new
@@ -13,15 +13,26 @@ class BiosController < ApplicationController
 
   def edit
     @bio = find_bios
+
   end
 
   def create
-    @bio = Bio.new bio_params
+    @bio = Bio.create(bio_params)
 
     if @bio.save
       redirect_to @bio, notice: "Bio created successfully"
     else
       render 'new'
+    end
+  end
+
+  def update
+    @bio = find_bios
+    if @bio.update_attributes(bio_params)
+      flash[:success] = "Bio updated"
+      redirect_to '/bios'
+    else
+      render 'edit'
     end
   end
 
@@ -36,7 +47,7 @@ class BiosController < ApplicationController
   end
 
   def bio_params
-    params.require(:bio).permit(:name, :position, :description)
+    params.require(:bio).permit(:name, :position, :description, :avatar)
   end
 
 end
