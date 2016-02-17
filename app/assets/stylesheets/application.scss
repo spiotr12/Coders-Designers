@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+@import 'materialize';
+
+/* Navigation */
+
+.nav_text_col{
+  background: white;
+}
+
+.nav_text_col a{
+  color: #595959;
+}
