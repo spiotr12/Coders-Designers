@@ -17,6 +17,10 @@
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
 
+body{
+  font-family: 'Roboto', serif;
+}
+
 /* Navigation */
 
 .nav_text_col{
