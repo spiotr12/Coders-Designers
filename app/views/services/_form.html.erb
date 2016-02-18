@@ -1,26 +1,21 @@
-<%= simple_form_for @project do |f| %>
-    <% if @project.errors.any? %>
-        <h2><%= pluralize(@project.errors.count, "error") %> prevented this project from saving:</h2>
+<%= simple_form_for @service do |f| %>
+    <% if @service.errors.any? %>
+        <h2><%= pluralize(@service.errors.count, "error") %> prevented this service from saving:</h2>
         <ul>
-          <% @project.errors.full_messages.each do |msg| %>
+          <% @service.errors.full_messages.each do |msg| %>
               <li><%= msg %></li>
           <% end %>
         </ul>
     <% end %>
 
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
+    <%= f.label :service_name %> <br>
+    <%= f.text_field :service_name %>
 
     <br>
     <br>
 
-    <%= f.label :description %> <br>
-    <%= f.text_area :description %>
-    <br>
-    <br>
-
-    <%= f.label :link %> <br>
-    <%= f.text_field :link %>
+    <%= f.label :service_description %> <br>
+    <%= f.text_area :service_description %>
 
     <br>
     <br>

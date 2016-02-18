@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :projects
   resources :bios
   resources :pages
+  resources :services
   root "projects#index"
 end

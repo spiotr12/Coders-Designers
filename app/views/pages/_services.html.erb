@@ -1,9 +1,9 @@
 <div class="container">
   <div class="section">
     <h4>Services:</h4>
-    <% @services.each do |service| %>
-        <!--   Icon Section   -->
-        <div class="row">
+    <div class="row">
+      <% @services.each do |service| %>
+          <!--   Icon Section   -->
           <div class="col s12 m4">
             <div class="icon-block">
               <!--To be replaced with image-->
@@ -13,8 +13,7 @@
               <p class="light"><%= service.service_description %>></p>
             </div>
           </div>
-    <% end %>
+      <% end %>
     </div>
-
   </div>
 </div>

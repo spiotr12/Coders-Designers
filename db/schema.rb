@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160208223155) do
+ActiveRecord::Schema.define(version: 20160218003133) do
 
   create_table "bios", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20160208223155) do
     t.string   "link"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "service_name"
+    t.text     "service_description"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "users", force: :cascade do |t|
