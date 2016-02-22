@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :bios
   resources :pages
   resources :services
-  root "projects#index"
+  root "pages#index"
+
 end

@@ -1,11 +1,29 @@
-<h1 id="page_title">Projects</h1>
-<div id="posts_wrapper" class="skinny_wrapper">
-  <% @projects.each do |project| %>
-      <div class="project">
-        <p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>
-        <h2><a href="#"><%= link_to project.title, project %></a></h2>
-        <hr>
-      </div>
-  <% end %>
-</div>
+<!--<h1 id="page_title">Projects</h1>-->
+<!--<div id="posts_wrapper" class="skinny_wrapper">-->
+  <!--<% @projects.each do |project| %>-->
+      <!--<div class="project">-->
+        <!--<p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>-->
+        <!--<h2><a href="#"><%= link_to project.title, project %></a></h2>-->
+        <!--<hr>-->
+      <!--</div>-->
+  <!--<% end %>-->
+<!--</div>-->
 
+<div class="container">
+  <div class="section">
+    <h4>Projects</h4>
+    <div class="row">
+      <% @projects.each do |project| %>
+          <!--   Icon Section   -->
+          <div class="col s12 m3">
+            <div class="icon-block">
+              <!--To be replaced with image-->
+              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+              <!---->
+              <h5 class="center"><%= project.title %></h5>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
