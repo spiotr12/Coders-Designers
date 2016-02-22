@@ -2,6 +2,7 @@ class ServicesController < ApplicationController
   before_action :find_service, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+
   def index
     @services = Service.all.order("created_at desc")
   end
@@ -45,6 +46,6 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:service_name, :service_description)
+    params.require(:service).permit(:service_name, :service_description, :pic)
   end
 end
