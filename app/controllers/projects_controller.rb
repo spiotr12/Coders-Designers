@@ -16,9 +16,12 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new project_params
+    @project = Project.new(project_params)
 
     if @project.save
+      params[:images].each { |image|
+        @project.pictures.create(image: image)
+      }
       redirect_to @project, notice: "Project created successfully"
     else
       render 'new'
@@ -26,7 +29,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
-
+    @project = Project.find(params[:id])
+    @pictures = @project.pictures
   end
 
   def update
@@ -46,6 +50,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description, :link)
+    params.require(:project).permit(:title, :description, :link, :images)
   end
 end
