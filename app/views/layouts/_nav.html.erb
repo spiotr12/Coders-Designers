@@ -1,21 +1,20 @@
 <nav class="nav_text_col" role="navigation">
   <div class="nav-wrapper container">
-    <a id="logo-container" href="#" class="brand-logo">Coders & Designers</a>
+    <a id="logo-container" href="#" class="brand-logo"><%= link_to "Codenite", root_path %></a>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Bio</a></li>
-      <li><a href="#">Portfolio</a></li>
+      <li><a href="#"><%= link_to "Bios", bios_path %></a></li>
+      <li><a href="#"><%= link_to "Projects", projects_path %></a></li>
       <li><a href="#">Clients</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#"><%= link_to "Contact", contact_path %></a></li>
     </ul>
 
     <ul class="side-nav" id="nav-mobile">
       <li><a href="#">Home</a></li>
       <li><a href="#">Bio</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Clients</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#"><%= link_to "Project", projects_path %></a></li>
+      <li><a href="#"><%= link_to "Contact", contact_path %></a></li>
+
     </ul>
   </div>
 </nav>

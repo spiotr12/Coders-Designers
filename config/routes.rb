@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :pages
   resources :services
   root "pages#index"
-
+  get '/contact' => 'pages#contact' , :as => "contact"
 end
