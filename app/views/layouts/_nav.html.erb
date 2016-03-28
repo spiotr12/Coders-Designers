@@ -7,6 +7,11 @@
       <li><a href="#"><%= link_to "Projects", projects_path %></a></li>
       <li><a href="#">Clients</a></li>
       <li><a href="#"><%= link_to "Contact", contact_path %></a></li>
+      <% if user_signed_in? %>
+          <li><a href="#"><%= link_to "Log out", destroy_user_session_path, :method => :delete %></a></li>
+          <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
+      <% end %>
+
     </ul>
 
     <ul class="side-nav" id="nav-mobile">

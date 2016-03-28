@@ -16,10 +16,52 @@
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
-
+$grapefruit: #DE5D73;
 
 
 body{
   font-family: 'Roboto', serif;
 }
 
+.round-image-50 {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-align: center;
+  img { width: 100% }
+}
+
+.grapefruit-text{
+  color: $grapefruit;
+}
+
+.grapefruit-bg{
+  background: $grapefruit;
+}
+
+.round-image-150 {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 75px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  height: 150px;
+  text-align: center;
+  width: 150px;
+  overflow: hidden;
+  text-align: center;
+  img { width: 100% }
+}
+
+/* Services */
+
+.img-middle {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

@@ -5,12 +5,12 @@
     <div class="row">
       <% group.each do |service| %>
           <!--   Icon Section   -->
-          <div class="col s12 m4">
-            <div class="icon-block">
+          <div class="col s12 m4 img-middle">
+            <div class="icon-block img-middle">
               <!--To be replaced with image-->
               <!--<h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>-->
               <!---->
-              <div class = "project_pic"><%= image_tag service.pic.url(:medium) %></div>
+              <div class = "project_pic round-image-150 img-middle"><%= image_tag service.pic.url(:medium) %></div>
               <h5 class="center"><%= service.service_name %></h5>
               <p class="light"><%= service.service_description %>></p>
             </div>
